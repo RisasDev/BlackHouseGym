@@ -1,0 +1,14 @@
+-- Eliminar la tabla si existe
+DROP TABLE IF EXISTS miembro;
+
+-- Crear la tabla miembro
+CREATE TABLE miembro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rut VARCHAR(10) NOT NULL,
+    nombre VARCHAR(20) NOT NULL,
+    appaterno VARCHAR(20) NOT NULL,
+    apmaterno VARCHAR(20) NOT NULL,
+    taller VARCHAR(50) NOT NULL,
+    dias_inscritos INT CHECK (dias_inscritos IN (30, 90, 180)),
+    cuota_mensual INT(100) NOT NULL
+);
