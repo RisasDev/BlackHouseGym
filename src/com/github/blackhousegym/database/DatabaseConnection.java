@@ -17,7 +17,7 @@ public class DatabaseConnection {
     public void connect() {        
         try{
             this.connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/bdjava", 
+                    "jdbc:mysql://localhost:3306/gymdb", 
                     "root", 
                     "");
             System.out.println("Database conectada correctamente.");
