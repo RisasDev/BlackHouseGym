@@ -84,8 +84,7 @@ public class DatabaseController {
     public int modificarMiembro(String rutIngresado, String rut, String nombre, String apellidoPaterno, 
             String apellidoMaterno, String taller, int diasInscritos, String cuotaMensual) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_MIEMBRO_SQL
-                    .replace("%rut_miembro%", rutIngresado));
+            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_MIEMBRO_SQL);
             
             preparedStatement.setString(1, rut);
             preparedStatement.setString(2, nombre);
