@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS miembro;
 -- Crear la tabla miembro
 CREATE TABLE miembro (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    rut VARCHAR(10) NOT NULL,
+    rut VARCHAR(10) NOT NULL UNIQUE,
     nombre VARCHAR(20) NOT NULL,
     appaterno VARCHAR(20) NOT NULL,
     apmaterno VARCHAR(20) NOT NULL,
